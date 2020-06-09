@@ -6,7 +6,7 @@
 
 PRGNAM=efl
 VERSION=$(echo $PRGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
-BUILD=${BUILD:-1sEL}
+BUILD=${BUILD:-2sEL}
 
 if [ -z "$ARCH" ]; then
   case "$(uname -m)" in
@@ -59,12 +59,11 @@ meson \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --mandir=/usr/man \
-  -Davahi=false \
   -Dfb=true \
   -Ddrm=true \
-  -Ddrm-deprecated=false \
   -Dopengl=full \
   -Dsystemd=false \
+  -Dwl=true \
   . build
   
 
