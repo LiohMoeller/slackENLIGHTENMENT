@@ -62,6 +62,8 @@ meson \
   -Dopengl=full \
   -Dsystemd=false \
   -Dwl=false \
+  -Dglib=true \
+  -Decore-imf-loaders-disabler=scim \
   . build
   
 
